@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site "http://community.opscode.com/api/v1"
+
+%w{ apt ubuntu vslinko }.each do |cb|
+  cookbook cb
+end
+
+%w{ application }.each do |suffix|
+  cookbook "barbudos_#{suffix}", :path => "barbudos/#{suffix}"
+end
