@@ -7,6 +7,10 @@ site "http://community.opscode.com/api/v1"
   cookbook cb
 end
 
+cookbook "application_nodejs",
+  :git => "git://github.com/vslinko/application_nodejs.git",
+  :ref => "patch-1"
+
 %w{ application }.each do |suffix|
   cookbook "barbudos_#{suffix}", :path => "barbudos/#{suffix}"
 end
