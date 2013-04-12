@@ -1,0 +1,16 @@
+{
+  "email": {
+    "service": "<%= @email_service %>",
+    "user": "<%= @email_user %>",
+    "password": "<%= @email_password %>"
+  },
+  "sms24x7": {
+    "username": "<%= @sms24x7_username %>",
+    "password": "<%= @sms24x7_password %>",
+    "callback": "<%= @sms24x7_callback %>"
+  },
+  "notification": {
+    "email": "<%= @notification_email %>",
+    "phones": [<%= @notification_phones.map { |p| '"' + String(p) + '"' }.join ", " %>]
+  }
+}
